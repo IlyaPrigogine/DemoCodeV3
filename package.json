@@ -6,15 +6,15 @@
   "scripts": {
     "node": "hardhat node",
     "test": "hardhat test --deploy-fixture",
-    "deploy:bsctest": "hardhat deploy --network bsc_test_prd",
-    
+    "deploy:bsctest": "hardhat deploy --network bsc_test",
+
     "compile" : "hardhat clean && hardhat compile",
     "deploy:local": "hardhat deploy --network localhost",
     "dai:local": "hardhat run scripts/dai_funcs.ts --network localhost",
-    
+
     "deploy:kovan": "hardhat deploy --network kovan",
     "dai:kovan": "hardhat run scripts/dai_funcs.ts --network kovan",
-    
+
     "deploy:ropsten": "hardhat deploy --network ropsten",
     "dai:ropsten": "hardhat run scripts/dai_funcs.ts --network ropsten"
   },
