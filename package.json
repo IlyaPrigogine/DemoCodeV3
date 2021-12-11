@@ -7,6 +7,11 @@
     "node": "hardhat node",
     "test": "hardhat test --deploy-fixture",
     "deploy:bsctest": "hardhat deploy --network bsc_test",
+    "deploy:mumbai": "hardhat deploy --network mumbai",
+    "deploy:optimistic_kovan": "hardhat deploy --network optimistic_kovan",
+    "deploy:arbitrum_rinkeby": "hardhat deploy --network arbitrum_rinkeby",
+    "deploy:fantom_tesnet": "hardhat deploy --network fantom_tesnet",
+    "deploy:avax_tesnet": "hardhat deploy --network avax_tesnet",
 
     "compile" : "hardhat clean && hardhat compile",
     "deploy:local": "hardhat deploy --network localhost",

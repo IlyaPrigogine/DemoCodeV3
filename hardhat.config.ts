@@ -62,6 +62,32 @@ const config: HardhatUserConfig = {
             gas: 2100000,
             gasPrice: 8000000000
         },
+        mumbai: {
+            url: secret.url_mumbai,
+            accounts: [secret.key],
+            timeout: 120000,
+        },
+        optimistic_kovan: {
+            url: secret.url_optimistic_kovan,
+            accounts: [secret.key],
+            timeout: 120000,
+        },
+        arbitrum_rinkeby: {
+            url: secret.url_arbitrum_rinkeby,
+            accounts: [secret.key],
+            timeout: 120000,
+        },
+        fantom_tesnet : {
+            url: secret.url_fantom_tesnet,
+            accounts: [secret.key],
+            timeout: 120000,
+        },
+        avax_tesnet : {
+            url: secret.url_fuji_testnet,
+            accounts: [secret.key],
+            timeout: 120000,
+        }
+
     },
     etherscan: {
         apiKey: secret.apiKey
