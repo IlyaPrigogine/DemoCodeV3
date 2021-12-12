@@ -13,7 +13,14 @@ const func: DeployFunction = async function ({deployments, getNamedAccounts, net
         skipIfAlreadyDeployed: true
     });
 
+    await deploy('MockToken', {
+        from: owner,
+        args: [],
+        log: true,
+        skipIfAlreadyDeployed: true
+    });
+
 
 };
 export default func;
-func.tags = ['Greeter'];
+func.tags = ['deployPayment'];

@@ -12,14 +12,11 @@
     "deploy:arbitrum_rinkeby": "hardhat deploy --network arbitrum_rinkeby",
     "deploy:fantom_tesnet": "hardhat deploy --network fantom_tesnet",
     "deploy:avax_tesnet": "hardhat deploy --network avax_tesnet",
-
-    "compile" : "hardhat clean && hardhat compile",
+    "compile": "hardhat clean && hardhat compile",
     "deploy:local": "hardhat deploy --network localhost",
     "dai:local": "hardhat run scripts/dai_funcs.ts --network localhost",
-
     "deploy:kovan": "hardhat deploy --network kovan",
     "dai:kovan": "hardhat run scripts/dai_funcs.ts --network kovan",
-
     "deploy:ropsten": "hardhat deploy --network ropsten",
     "dai:ropsten": "hardhat run scripts/dai_funcs.ts --network ropsten"
   },
@@ -48,5 +45,8 @@
     "typechain": "^5.1.2",
     "typescript": "^4.4.2",
     "solidity-coverage": "^0.7.17"
+  },
+  "dependencies": {
+    "@openzeppelin/test-helpers": "^0.5.15"
   }
 }

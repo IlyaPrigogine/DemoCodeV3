@@ -1,19 +1,18 @@
 import { expect } from "chai";
 import { ethers } from "hardhat";
+import {MockToken, Payment} from "../typechain";
 
-describe("Greeter", function () {
-  it("Should return the new greeting once it's changed", async function () {
-    // const Greeter = await ethers.getContractFactory("Greeter");
-    // const greeter = await Greeter.deploy("Hello, world!");
-    // await greeter.deployed();
-
-    // expect(await greeter.greet()).to.equal("Hello, world!");
-    //
-    // // const setGreetingTx = await greeter.setGreeting("Hola, mundo!");
-    // //
-    // // // wait until the transaction is mined
-    // // await setGreetingTx.wait();
-    // //
-    // // expect(await greeter.greet()).to.equal("Hola, mundo!");
+describe("Payment", function () {
+  let payment: Payment;
+  let mockToken : MockToken;
+  beforeEach(async () => {
+    payment = await ethers.getContract('Payment') as Payment;
+    mockToken = await ethers.getContract('MockToken') as MockToken;
   });
+
+  it ('test001', async() => {
+    console.log(`payment: ${payment.address}`);
+    console.log(`mockToken: ${mockToken.address}`);
+  })
+
 });
