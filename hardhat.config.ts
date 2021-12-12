@@ -42,7 +42,11 @@ const config: HardhatUserConfig = {
     },
     namedAccounts: {
         owner: 0,
-        user1: 1
+        user1: 1,
+        user2: 2,
+        user3: 3,
+        user4: 4,
+        user5: 5,
     },
     networks: {
         bsc_test: {
