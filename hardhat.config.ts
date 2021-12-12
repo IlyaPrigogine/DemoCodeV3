@@ -49,6 +49,11 @@ const config: HardhatUserConfig = {
         user5: 5,
     },
     networks: {
+        hardhat: {
+            mining: {
+                auto: true
+            }
+        },
         bsc_test: {
             url: secret.url,
             accounts: [secret.key],

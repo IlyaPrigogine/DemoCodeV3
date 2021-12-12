@@ -29,7 +29,7 @@ contract Payment {
     function createPlan(address token, uint amount, uint frequency) external {
         require(token != address(0), "address cannot be null address" );
         require(amount > 0, "amount needs to be > 0 ");
-        require (frequency > 0, "frequency needs to be >0");
+//        require (frequency > 0, "frequency needs to be >0");
 
         plans[nextPlanId] = Plan(
             msg.sender,
@@ -70,7 +70,7 @@ contract Payment {
         Plan storage plan = plans[planId];
         IERC20 token = IERC20(plan.token);
         require( subscription.subscriber != address (0), "this subscription does not exist");
-        require( block.timestamp > subscription.nextPayment, "not due yet");
+//        require( block.timestamp > subscription.nextPayment, "not due yet");
 
         token.transferFrom(subscriber, plan.merchant, plan.amount);
         emit PaymentSent(subscriber, plan.merchant, plan.amount, planId, block.timestamp);
