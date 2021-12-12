@@ -6,6 +6,12 @@ const func: DeployFunction = async function ({deployments, getNamedAccounts, net
     const {owner} = await getNamedAccounts();
 
     console.log('chainId:', await getChainId());
+    await deploy('Payment', {
+        from: owner,
+        args: [],
+        log: true,
+        skipIfAlreadyDeployed: true
+    });
 
 
 };
