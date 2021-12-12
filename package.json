@@ -6,7 +6,11 @@
   "scripts": {
     "node": "hardhat node",
     "test": "hardhat test --deploy-fixture",
+
     "deploy:bsctest": "hardhat deploy --network bsc_test",
+    "test:bsctest": "hardhat test --deploy-fixture --show-stack-traces",
+
+
     "deploy:mumbai": "hardhat deploy --network mumbai",
     "deploy:optimistic_kovan": "hardhat deploy --network optimistic_kovan",
     "deploy:arbitrum_rinkeby": "hardhat deploy --network arbitrum_rinkeby",

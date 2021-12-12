@@ -15,23 +15,6 @@ const tokenCreatePlanAmount_100 = 100;
 const tokenCreatePlanAmount_200 = 200;
 const tokenTransferAmount = 1000;
 
-const setup = deployments.createFixture(async () => {
-  await deployments.fixture();
-  const contracts = {
-    token: await ethers.getContract<MockToken>('MockToken'),
-    payment: await ethers.getContract<Payment>('Payment')
-  };
-
-  const {owner, user1,user2} = await getNamedAccounts();
-  const [admin,merchant, subscriber] = [owner, user1, user2];
-
-  return {...contracts,
-    admin: await setupUser(admin, contracts),
-    merchant: await setupUser(merchant, contracts),
-    subscriber: await setupUser(subscriber, contracts)
-  };
-});
-
 describe("Payment", async () => {
   const {owner, user1,user2} = await getNamedAccounts();
   const [admin,merchant, subscriber] = [owner, user1, user2];
