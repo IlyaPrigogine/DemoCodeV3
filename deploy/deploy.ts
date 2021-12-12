@@ -7,11 +7,6 @@ const func: DeployFunction = async function ({deployments, getNamedAccounts, net
 
     console.log('chainId:', await getChainId());
 
-    await deploy('Greeter', {
-        from: owner,
-        args: ['new greeting'],
-        log: true,
-    });
 
 };
 export default func;
